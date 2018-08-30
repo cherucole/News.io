@@ -14,3 +14,10 @@ def index():
     return render_template('index.html', sources = sources)
 
 # @app.route('/article/')
+@app.route('/articles/<articles_name>')
+def articles(articles_name):
+
+    '''
+    View movie page function that returns the movie details page and its data
+    '''
+    return render_template('articles.html',name = articles_name)
