@@ -1,10 +1,11 @@
 <h1> My display test {{message}}</h1>
 <!-- Popular movie section  -->
-         <ul>
+         <a>
             {% for source in sources %}
                 <li>{{source.id}}
                     <br>
                 {{source.description}}</li>
+             <a href="/articles/{{source.id}}">{{source.id}}</a>
 
             {% endfor %}
         </ul>

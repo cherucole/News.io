@@ -3,12 +3,14 @@ import urllib.request,json
 from .models import sources
 
 Sources= sources.Sources
+Articles=sources.Articles
 
 #fetching API key
 api_key= app.config['NEWS_API_KEY']
 
 #getting the news base url
 base_url = app.config['NEWS_API_SOURCE_URL']
+source_base_url=['SOURCE_NEWS_URL']
 
 def get_sources():
     '''
@@ -42,3 +44,41 @@ def process_results(sources_list):
     # print(sources_results)
 
     return sources_results
+
+def get_articles(id):
+    get_articles_details_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
+    print(get_articles_details_url)
+
+    with urllib.request.urlopen(get_articles_details_url) as url:
+        articles_details_data = url.read()
+        articles_details_response = json.loads(articles_details_data)
+
+        articles_object = None
+        if articles_details_response["articles"]:
+            articles_list=articles_details_response['articles']
+            articles_object= process_source_results(articles_list)
+            # author = articles_details_response.get('author')
+            # title = articles_details_response.get('title')
+            # description = articles_details_response.get('description')
+            # url = articles_details_response.get('url')
+            # publishedAt = articles_details_response.get('publishedAt')
+
+            # articles_object = Articles(author,title,description,url,publishedAt)
+
+    return articles_object
+
+def process_source_results(news_list):
+    articles_object=[]
+    for news_item in news_list:
+        author = news_item.get('author')
+        title = news_item.get('title')
+        description = news_item.get('description')
+        url = news_item.get('url')
+        publishedAt = news_item.get('publishedAt')
+
+
+        source_news_object = Articles(author,title,description,url,publishedAt)
+        articles_object.append(source_news_object)
+    # print(sources_results)
+
+    return articles_object

@@ -1,1 +1,9 @@
 <h1> Hello News from {{ name }} </h1>
+<ul>
+            {% for source in articles %}
+    <p>{{source.description}}</p>
+    <p>{{source.id}}</p><p>{{source.url}}</p><p>{{source.title}}</p>
+
+
+            {% endfor %}
+        </ul>

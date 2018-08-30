@@ -4,3 +4,13 @@ class Sources:
         self.name=name
         self.description=description
         self.language=language
+
+
+
+class Articles:
+    def __init__(self,author,title,description,url,publishedAt):
+        self.author=author
+        self.title=title
+        self.description=description
+        self.url=url
+        self.publishedAt=publishedAt
