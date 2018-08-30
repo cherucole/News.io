@@ -18,7 +18,7 @@ def index():
 def articles(id):
 
     '''
-    View movie page function that returns the movie details page and its data
+    View  page function that returns the details page and its data
     '''
     name="cherucole"
     articles=get_articles(id)
