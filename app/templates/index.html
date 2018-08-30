@@ -1,1 +1,7 @@
 <h1> My display test {{message}}</h1>
+<!-- Popular movie section  -->
+         <ul>
+            {% for source in sources %}
+                <li>{{source.id}}</li>
+            {% endfor %}
+        </ul>
