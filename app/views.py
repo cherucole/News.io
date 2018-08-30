@@ -7,4 +7,7 @@ def index():
     my index page
     :return:
     '''
-    return render_template('index.html')
+    my_message= "Test Dynamic message"
+    return render_template('index.html', message=my_message)
+
+# @app.route('/article/')
