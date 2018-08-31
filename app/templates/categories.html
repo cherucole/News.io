@@ -1,3 +1,5 @@
+
+
 {% extends 'base.html'%}
 
 {% block content %}
@@ -7,17 +9,25 @@
 <br>
 <br>
 
-<h1> Category: {{category_name1}} </h1>
-<ul>
-            {% for category_item in category %}
-    <p>{{category_item.description}}</p>
-    <p>{{category_item.id}}</p><p>{{category_item.url}}</p><p>{{category_item.title}}</p>
+<h1> News from {{ category_name1 }} </h1>
+<div class="container">
+<div class="card-columns">
+                {% for category_item in category %}
 
-    <!--{{ category_item.urlToImage }}-->
-    <img src="{{ category_item.urlToImage }}" alt="{{ category_item.title }} poster" class="img-responsive">
+  <div class="card">
+    <img class="card-img-top" src="{{ category_item.urlToImage }}" alt="Card image cap" size="100px180">
+    <div class="card-body">
+      <h5 class="card-title">{{category_item.title}}</h5>
+      <p class="card-text">{{category_item.description}}</p>
+    </div>
+  </div>
+                {% endfor %}
 
-            {% endfor %}
-        </ul>
+      </div>
+          </div>
+
+
+
 
 {% endblock%}
 </body>>
