@@ -12,10 +12,14 @@
 <ul>
 
             {% for source in sources %}
-                <li>{{source.id}}
+                <!--{{source.id}}-->
+                 <a href="/articles/{{source.id}}">{{source.id}}</a>
+
                     <br>
-                {{source.description}}</li>
-             <a href="/articles/{{source.id}}">{{source.id}}</a>
+                {{source.description}}
+    <br>
+             <!--<a href="/articles/{{source.id}}">{{source.id}}</a>-->
+                    <br>
 
             {% endfor %}
         </ul>
