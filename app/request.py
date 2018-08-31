@@ -93,10 +93,10 @@ def get_category(category):
         get_category_data = url.read()
         get_cartegory_response = json.loads(get_category_data)
 
-        get_cartegory_results = None
+        get_category_results = None
 
         if get_cartegory_response['articles']:
-            get_cartegory_list = get_cartegory_response['articles']
-            get_cartegory_results = process_source_results(get_cartegory_list)
+            get_category_list = get_cartegory_response['articles']
+            get_category_results = process_source_results(get_category_list)
 
-    return get_cartegory_results
+    return get_category_results

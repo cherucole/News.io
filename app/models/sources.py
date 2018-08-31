@@ -19,10 +19,10 @@ class Articles:
 
 
 
-class CatList:
-    def __init__(self,name,category,description,url):
-        self.name=name
-        self.category=category
-        self.description=description
-        self.url=url
+# class CatList:
+#     def __init__(self,name,category,description,url):
+#         self.name=name
+#         self.category=category
+#         self.description=description
+#         self.url=url
 
