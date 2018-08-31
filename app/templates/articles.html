@@ -1,8 +1,10 @@
-<h1> Hello News from {{ name }} </h1>
+<h1> News from {{ name_source }} </h1>
 <ul>
             {% for article in articles %}
     <p>{{article.description}}</p>
     <p>{{article.id}}</p><p>{{article.url}}</p><p>{{article.title}}</p>
+
+    {{ article.source }}
 
 
             {% endfor %}
