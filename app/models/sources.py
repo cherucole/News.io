@@ -8,9 +8,10 @@ class Sources:
 
 
 class Articles:
-    def __init__(self,author,title,description,url,publishedAt):
+    def __init__(self,author,title,description,url,publishedAt,urlToImage):
         self.author=author
         self.title=title
         self.description=description
         self.url=url
         self.publishedAt=publishedAt
+        self.urlToImage=urlToImage

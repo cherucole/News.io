@@ -75,9 +75,10 @@ def process_source_results(news_list):
         description = news_item.get('description')
         url = news_item.get('url')
         publishedAt = news_item.get('publishedAt')
+        urlToImage=news_item.get('urlToImage')
 
 
-        source_news_object = Articles(author,title,description,url,publishedAt)
+        source_news_object = Articles(author,title,description,url,publishedAt,urlToImage)
         articles_object.append(source_news_object)
     # print(sources_results)
 

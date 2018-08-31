@@ -4,8 +4,8 @@
     <p>{{article.description}}</p>
     <p>{{article.id}}</p><p>{{article.url}}</p><p>{{article.title}}</p>
 
-    {{ article.source }}
-
+    {{ article.urlToImage }}
+    <img src="{{ article.urlToImage }}" alt="{{ article.title }} poster" class="img-responsive">
 
             {% endfor %}
         </ul>
