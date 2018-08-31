@@ -1,8 +1,8 @@
 <h1> Hello News from {{ name }} </h1>
 <ul>
-            {% for source in articles %}
-    <p>{{source.description}}</p>
-    <p>{{source.id}}</p><p>{{source.url}}</p><p>{{source.title}}</p>
+            {% for article in articles %}
+    <p>{{article.description}}</p>
+    <p>{{article.id}}</p><p>{{article.url}}</p><p>{{article.title}}</p>
 
 
             {% endfor %}
