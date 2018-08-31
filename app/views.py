@@ -10,8 +10,8 @@ def index():
     '''
     sources=  get_sources()
     print(sources)
-    # my_message= "Test Dynamic message"
-    return render_template('index.html', sources = sources)
+    message= "Test Dynamic message"
+    return render_template('index.html', sources = sources, message=message)
 
 # @app.route('/article/')
 @app.route('/articles/<id>')

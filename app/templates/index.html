@@ -1,5 +1,8 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
 <h1> My display test {{message}}</h1>
-<!-- Popular movie section  -->
 <ul>
 
             {% for source in sources %}
@@ -10,3 +13,23 @@
 
             {% endfor %}
         </ul>
+{% endblock%}
+
+
+
+ <!--{% import 'macros.html' as macro%}-->
+
+
+<!--<h1> My display test {{message}}</h1>-->
+
+
+
+
+<!--<body>-->
+        <!--&lt;!&ndash; Popular movie &ndash;&gt;-->
+        <!--<h3> My display test {{message}}</h3>-->
+        <!--<ul>-->
+            <!--{{ macro.displaySourceList()}}-->
+        <!--</ul>-->
+    <!--</body>-->
+

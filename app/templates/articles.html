@@ -1,3 +1,6 @@
+{% extends 'base.html'%}
+
+{% block content %}
 <h1> News from {{ name_source }} </h1>
 <ul>
             {% for article in articles %}
@@ -9,3 +12,5 @@
 
             {% endfor %}
         </ul>
+
+{% endblock%}
