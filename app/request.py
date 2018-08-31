@@ -28,6 +28,8 @@ def get_sources():
             sources_results_list = get_sources_response['sources']
             sources_results=process_results(sources_results_list)
 
+        # sources_results=sources_results[0:15]
+
     return sources_results
 
 def process_results(sources_list):

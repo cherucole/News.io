@@ -22,6 +22,6 @@ def articles(id):
     '''
     name="cherucole"
     articles=get_articles(id)
-    print(articles)
+    # print(articles)
     # title=f'{articles.title}'
     return render_template('articles.html', articles=articles, name=name,name_source=id)
