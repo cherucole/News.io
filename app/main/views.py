@@ -1,8 +1,10 @@
 from flask import render_template
-from app import app
-from .request import get_sources,get_articles,get_category
+from . import main
+from ..request import get_sources,get_articles,get_category
+from ..models import Articles,Sources
 
-@app.route('/')
+
+@main.route('/')
 def index():
     '''
     my index page
@@ -14,7 +16,7 @@ def index():
     return render_template('index.html', sources = sources, message=message)
 
 # @app.route('/article/')
-@app.route('/articles/<id>')
+@main.route('/articles/<id>')
 def articles(id):
 
     '''
@@ -26,7 +28,7 @@ def articles(id):
     # title=f'{articles.title}'
     return render_template('articles.html', articles=articles, name=name,name_source=id)
 
-@app.route('/categories/<category_name>')
+@main.route('/categories/<category_name>')
 def categories(category_name):
 
     '''
