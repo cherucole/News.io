@@ -11,6 +11,7 @@ api_key= app.config['NEWS_API_KEY']
 #getting the news base url
 base_url = app.config['NEWS_API_SOURCE_URL']
 source_base_url=['SOURCE_NEWS_URL']
+categories_url=["CATEGORIES_URL"]
 
 def get_sources():
     '''
@@ -85,3 +86,17 @@ def process_source_results(news_list):
     # print(sources_results)
 
     return articles_object
+
+def get_category(category):
+    get_category_url = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey={}'.format(category, api_key)
+    with urllib.request.urlopen(get_category_url) as url:
+        get_category_data = url.read()
+        get_cartegory_response = json.loads(get_category_data)
+
+        get_cartegory_results = None
+
+        if get_cartegory_response['articles']:
+            get_cartegory_list = get_cartegory_response['articles']
+            get_cartegory_results = process_source_results(get_cartegory_list)
+
+    return get_cartegory_results
