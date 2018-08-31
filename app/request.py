@@ -4,6 +4,7 @@ from .models import sources
 
 Sources= sources.Sources
 Articles=sources.Articles
+CatList=sources.CatList
 
 #fetching API key
 api_key= app.config['NEWS_API_KEY']
@@ -87,16 +88,47 @@ def process_source_results(news_list):
 
     return articles_object
 
+# def get_category(category):
+#     get_category_url = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey={}'.format(category, api_key)
+#     with urllib.request.urlopen(get_category_url) as url:
+#         get_category_data = url.read()
+#         get_cartegory_response = json.loads(get_category_data)
+#
+#         get_cartegory_results = None
+#
+#         if get_cartegory_response['articles']:
+#             get_cartegory_list = get_cartegory_response['articles']
+#             get_cartegory_results = process_source_results(get_cartegory_list)
+#
+#     return get_cartegory_results
+
 def get_category(category):
-    get_category_url = 'https://newsapi.org/v2/everything?q={}&sortBy=relevancy&apiKey={}'.format(category, api_key)
+    get_category_url = 'https://newsapi.org/v2/sources?category={}&language=en&apiKey={}'.format(category, api_key)
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
         get_cartegory_response = json.loads(get_category_data)
 
         get_cartegory_results = None
 
-        if get_cartegory_response['articles']:
-            get_cartegory_list = get_cartegory_response['articles']
-            get_cartegory_results = process_source_results(get_cartegory_list)
+        if get_cartegory_response['sources']:
+            get_cartegory_list = get_cartegory_response['sources']
+            get_cartegory_results = process_source_results_s(get_cartegory_list)
 
     return get_cartegory_results
+
+def process_source_results_s(cat_list):
+    cat_object_list=[]
+    for cat_item1 in cat_list:
+        name = cat_item1.get('author')
+        category = cat_item1.get('title')
+        description = cat_item1.get('description')
+        url = cat_item1.get('url')
+        # publishedAt = cat_item1.get('publishedAt')
+        # urlToImage=cat_item1.get('urlToImage')
+
+
+        source_news_object = CatList(name,category,description,url)
+        cat_object_list.append(source_news_object)
+    # print(sources_results)
+
+    return cat_object_list

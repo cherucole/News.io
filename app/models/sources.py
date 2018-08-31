@@ -15,3 +15,14 @@ class Articles:
         self.url=url
         self.publishedAt=publishedAt
         self.urlToImage=urlToImage
+
+
+
+
+class CatList:
+    def __init__(self,name,category,description,url):
+        self.name=name
+        self.category=category
+        self.description=description
+        self.url=url
+
