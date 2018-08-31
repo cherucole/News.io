@@ -7,13 +7,13 @@
 <br>
 <br>
 
-<h1> News from {{ name_source }} </h1>
+<h1>{{ category_name1 }} Category </h1>
 <ul>
             {% for category_item in category %}
     <p>{{category_item.description}}</p>
     <p>{{category_item.id}}</p><p>{{category_item.url}}</p><p>{{category_item.title}}</p>
 
-    {{ category_item.urlToImage }}
+    <!--{{ category_item.urlToImage }}-->
     <img src="{{ category_item.urlToImage }}" alt="{{ category_item.title }} poster" class="img-responsive">
 
             {% endfor %}
