@@ -19,7 +19,11 @@
     <div class="card-body">
       <h5 class="card-title">{{category_item.title}}</h5>
       <p class="card-text">{{category_item.description}}</p>
+                    <a href="{{category_item.url}}" class="card-link">Read Full Story</a>
+
     </div>
+                  <footer class="blockquote-footer"> <cite title="Source Title">Posted on {{category_item.publishedAt}} </cite></footer>
+
   </div>
                 {% endfor %}
 
