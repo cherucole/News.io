@@ -9,39 +9,22 @@
 <br>
 
 <h1> My display test {{message}}</h1>
-<ul>
-
+<div class="container">
+<div class="card-columns">
             {% for source in sources %}
-                <!--{{source.id}}-->
-                 <a href="/articles/{{source.id}}">{{source.id}}</a>
 
-                    <br>
-                {{source.description}}
-    <br>
-             <!--<a href="/articles/{{source.id}}">{{source.id}}</a>-->
-                    <br>
+ <div class="card border-secondary mb-3" style="max-width: 18rem;">
+  <div class="card-header"><a href="/articles/{{source.id}}">{{source.name}}</a></div>
+  <div class="card-body text-secondary">
+    <!--<h5 class="card-title">Secondary card title</h5>-->
+    <p class="card-text">{{source.description}}</p>
+  </div>
+</div>
 
-            {% endfor %}
-        </ul>
+                {% endfor %}
+
+      </div>
+          </div>
 {% endblock%}
 </body>
-
-
-
-
- <!--{% import 'macros.html' as macro%}-->
-
-
-<!--<h1> My display test {{message}}</h1>-->
-
-
-
-
-<!--<body>-->
-        <!--&lt;!&ndash; Popular movie &ndash;&gt;-->
-        <!--<h3> My display test {{message}}</h3>-->
-        <!--<ul>-->
-            <!--{{ macro.displaySourceList()}}-->
-        <!--</ul>-->
-    <!--</body>-->
 

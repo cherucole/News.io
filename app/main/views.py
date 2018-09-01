@@ -1,3 +1,4 @@
+import datetime as datetime
 from flask import render_template
 from . import main
 from ..request import get_sources,get_articles,get_category
@@ -42,3 +43,10 @@ def categories(category_name):
     # print(articles)
     # title=f'{articles.title}'
     return render_template('categories.html', category=category,name_source=id,category_name1=category_name1)
+
+# @main.template_filter('strftime')
+# def _jinja2_filter_datetime(date, fmt=None):
+#     date = dateutil.parser.parse(date)
+#     native = date.replace(tzinfo=None)
+#     format='%b %d, %Y'
+#     return native.strftime(format)
