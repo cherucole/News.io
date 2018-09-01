@@ -10,7 +10,7 @@
 ## Description
 
 Unofficial News App through News API for [News API](https://newsapi.org/).
-The app is live here [News.io](https://newsapi.org/).
+The app is live here [News.io](https://news-io.herokuapp.com/).
 
 ## Getting Started
 
