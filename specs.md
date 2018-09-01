@@ -1,4 +1,4 @@
-![Hacker News API](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/iphone7-ipad-use-news-hero.jpg)
+![News.io App](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/iphone7-ipad-use-news-hero.jpg)
 
 Unofficial News App through News API for [News API](https://newsapi.org/).
 The app is live here [News.io](https://newsapi.org/).
