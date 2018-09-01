@@ -2,19 +2,6 @@
 
 ![Hacker News API](https://support.apple.com/library/content/dam/edam/applecare/images/en_US/mac_apps/itunes/iphone7-ipad-use-news-hero.jpg)
 
-Unofficial News App through News API for [News API](https://newsapi.org/).
-The app is live here [News.io](https://newsapi.org/).
-
-
-Features
-========
-
-- Built with Python 3 (3.7+) and Flask
-- Shows 'news sources', 'news articles','categories' and sorted by relevancy
-- Styled using Bootstrap
-- Handles external get posts and requests from API
-- Get news articles from several sources (`choose from landing page`)
-
 
 #### 31-Aug-2018
 
@@ -36,7 +23,6 @@ You will need to:
 -   Have python installed
 -   Have a terminal to interact with the app.
 -   Any text editor
-
 
 
 Installation
