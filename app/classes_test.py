@@ -55,23 +55,6 @@ class ArticlesTest(unittest.TestCase):
         self.assertEqual(self.new_article.urlToImage, "http://foxnews.com/img345.jpg")
 
 
-
-# class Articles:
-#     def __init__(self,author,title,description,url,publishedAt,urlToImage):
-#         self.author=author
-#         self.title=title
-#         self.description=description
-#         self.url=url
-#         self.publishedAt=publishedAt
-#         self.urlToImage=urlToImage
-
-
 if __name__ == '__main__':
     unittest.main()
 
-
-    # def __init__(self,id,name,description,language):
-    #     self.id=id
-    #     self.name=name
-    #     self.description=description
-    #     self.language=language

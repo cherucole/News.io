@@ -39,14 +39,5 @@ def categories(category_name):
     category=get_category(category_name)
     print(category_name)
     category_name1=category_name
-    # articles=get_articles(id)
-    # print(articles)
-    # title=f'{articles.title}'
-    return render_template('categories.html', category=category,name_source=id,category_name1=category_name1)
 
-# @main.template_filter('strftime')
-# def _jinja2_filter_datetime(date, fmt=None):
-#     date = dateutil.parser.parse(date)
-#     native = date.replace(tzinfo=None)
-#     format='%b %d, %Y'
-#     return native.strftime(format)
+    return render_template('categories.html', category=category,name_source=id,category_name1=category_name1)

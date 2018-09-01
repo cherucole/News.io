@@ -1,23 +1,13 @@
-# from app import app
-# import urllib.request,json
-# from .models import sources
-
-
 import urllib.request,json
 from .models import Articles,Sources
 
-
-#
-# Sources= sources.Sources
-# Articles=sources.Articles
 
 #fetching API key
 api_key= None
 
 #getting the news base url
 base_url = None
-# source_base_url=['NEWS_API_SOURCE_URL']
-# categories_url=["CATEGORIES_URL"]
+
 
 def configure_request(app):
     global api_key,base_url
@@ -72,13 +62,6 @@ def get_articles(id):
         if articles_details_response["articles"]:
             articles_list=articles_details_response['articles']
             articles_object= process_source_results(articles_list)
-            # author = articles_details_response.get('author')
-            # title = articles_details_response.get('title')
-            # description = articles_details_response.get('description')
-            # url = articles_details_response.get('url')
-            # publishedAt = articles_details_response.get('publishedAt')
-
-            # articles_object = Articles(author,title,description,url,publishedAt)
 
     return articles_object
 
