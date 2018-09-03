@@ -1,11 +1,10 @@
 import unittest
 from app.models import Sources,Articles
-# Sources = sources.Sources
-# Articles=sources.Articles
+
 
 class SourcesTest(unittest.TestCase):
     '''
-    Test Class to test the behaviour of the Movie class
+    Test Class to test the behaviour of the classes
     '''
 
     def setUp(self):
@@ -54,7 +53,4 @@ class ArticlesTest(unittest.TestCase):
         self.assertEqual(self.new_article.publishedAt, "2018-09-01T06:27:00Z")
         self.assertEqual(self.new_article.urlToImage, "http://foxnews.com/img345.jpg")
 
-
-if __name__ == '__main__':
-    unittest.main()
 
