@@ -4,27 +4,26 @@
 
 
 <body>
-<br>
-<br>
-<br>
+  <br>
+  <br>
+  <br>
 
-<h3 style="text-align:center; color:#0d47a1" class="display-3">Available News Sources</h3>
-<div class="container">
-<div class="card-columns">
-            {% for source in sources %}
+  <h3 style="text-align:center; color:#0d47a1" class="display-3">Available News Sources</h3>
+  <div class="container">
+    <div class="card-columns">
 
- <div class="card border-secondary mb-3" style="max-width: 18rem;">
-  <div class="card-header"><a href="/articles/{{source.id}}">{{source.name}}</a></div>
-  <div class="card-body text-secondary">
-    <!--<h5 class="card-title">Secondary card title</h5>-->
-    <p class="card-text">{{source.description}}</p>
-  </div>
-</div>
+      {% for source in sources %}
 
-                {% endfor %}
-
+      <div class="card border-secondary mb-3" style="max-width: 18rem;">
+        <div class="card-header"><a href="/articles/{{source.id}}">{{source.name}}</a></div>
+        <div class="card-body text-secondary">
+          <p class="card-text">{{source.description}}</p>
+        </div>
       </div>
-          </div>
-{% endblock%}
-</body>
 
+      {% endfor %}
+
+    </div>
+  </div>
+  {% endblock%}
+</body>
